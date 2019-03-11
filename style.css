@@ -1,11 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
-
-html,
-body {
-  background-color: #a9d7d1;
+html,body {
+  background: rgb(36,227,202);
+  background: linear-gradient(0deg, rgba(36,227,202,1) 0%, rgba(200,190,6,1) 100%);
   text-align: center;
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
   min-width: 320px;
+  margin: 0px;
 }
 
 header {
@@ -15,9 +14,9 @@ header {
 }
 
 #form-outer {
-  background-color: rgb(250, 250, 250);
+  background-color: #eeeeee;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 25px;
   width: 75%;
   max-width: 900px;
   padding: 10px;
@@ -46,7 +45,7 @@ header {
   padding: 5px;
   margin: 10px;
   border: 1px solid #c0c0c0;
-  border-radius: 2px;
+  border-radius: 7px;
 }
 
 #userAge {
@@ -60,7 +59,7 @@ input[type="checkbox"] {
 }
 
 #submit {
-  background-color: #59ace0;
+  background-color: #43a047;
   border-radius: 4px;
   color: white;
   font-size: 1em;
@@ -68,6 +67,7 @@ input[type="checkbox"] {
   width: 96px;
   margin: 10px;
   border: 0px solid;
+  border-radius: 7px;
 }
 
 .dropdown {
@@ -77,7 +77,7 @@ input[type="checkbox"] {
   margin: 10px;  
   margin-top: 15px;
   border: 1px solid #c0c0c0;
-  border-radius: 2px;
+  border-radius: 7px;
 }
 
 .radio, .checkbox {
