@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <title>Survey Form</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>@import url('https://fonts.googleapis.com/css?family=Lato');</style>
@@ -14,103 +20,182 @@
   <p id="description">
     <b>Let us know how we can improve our Company</b>
   </p>
-  <form id="survey-form" method="GET" action=" https://crossorigin.me/https://google.com ">
-    <div class="rowTab">
-      <div class="labels">
-        <label id="name-label" for="name">* Name: </label>
+  
+
+  <div class="row">
+    <form id="survey-form" class="col s12" method="GET" action=" https://crossorigin.me/https://google.com ">
+      <div class="row">
+        <div class="input-field col s4">
+          <input name="name" id="name" type="text" class="validate" required>
+          <label id="name-label" for="name">*Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input name="email" id="email" type="email" class="validate" required>
+          <label id="email-label" for="email">*Email</label>
+        </div>
+        <div class="input-field col s4">
+            <input name="age" id="number" type="number" class="input-field" min="1" max="125">
+            <label id="number-label" for="last_name">*Age</label>
+          </div>
       </div>
-      <div class="rightTab">
-        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+
+      <div class="row">
+        <div class="labels col s12 m6">
+          <label for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
+        </div>
+        <div id="satisdisat" class="input-field col s12 m6">
+          <select  name="currentPos" class="dropdown">
+            <option value="" disabled selected>Select an option</option>
+            <option  value="versat">Very satisfied</option>
+            <option value="somsat">Somewhat satisfied</option>
+            <option value="neithsat">Neither satisfied nor dissatisfied</option>
+            <option value="somdis">Somewhat dissatisfied</option>
+            <option value="verdis">Very dissatisfied</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
       </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label id="email-label" for="email">* Email: </label>
+
+      <div class="row">
+        <div class="labels col s12 m6">
+          <label for="userRating">* How likely is that you would recommend our Company to a friend?</label>
+        </div>
+        <div id="userRating" class="col s12 m6">
+          <p>
+            <label>
+              <input name="radio-buttons" value="1" type="radio" class="with-gap">
+              <span>Definitely</span>
+            </label>
+          </p>
+          <p> 
+            <label>
+              <input name="radio-buttons" value="2" type="radio" class="with-gap">
+              <span>Maybe</span>
+            </label>
+          </p>
+          <p> 
+            <label>
+              <input name="radio-buttons" value="3" type="radio" class="with-gap">
+              <span>Not sure</span>
+            </label>
+          </p>
+        </div>
       </div>
-      <div class="rightTab">
-        <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+
+      <div class="row">
+        <div class="labels col s12 m6">
+          <label for="most-like">How would you rate the quality of the product?</label>
+        </div>
+        <div id="most-like" class="input-field col s12 m6">
+          <select name="mostLike" class="dropdown">
+            <option disabled selected value="">Select an option</option>
+            <option value="veryhigh">Very high quality</option>
+            <option value="high">High quality</option>
+            <option value="neitherhighnorlow">Neither high nor low quality</option>
+            <option value="low">Low quality</option>
+            <option value="verylow">Very low quality</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
       </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label id="number-label" for="age">* Age: </label>
+
+      <div class="row">
+        <div class="labels col s12 m6">
+          <label for="preferences">Things that should be improved in the future (Check all that apply): </label>
+        </div>
+        <div id="preferences" class="col s12 m5">
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="1" name="prefer" />
+              <span>Responsibility</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="2" name="prefer" />
+              <span>Supervisor work</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="3" name="prefer" />
+              <span>Management</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="4" name="prefer" />
+              <span>Client comunication</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="5" name="prefer" />
+              <span>Service</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="6" name="prefer" />
+              <span>Logistics</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="7" name="prefer" />
+              <span>Company design</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="8" name="prefer" />
+              <span>Prices</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="9" name="prefer" />
+              <span>Team members</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="10" name="prefer" />
+              <span>Working hours</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="userRatings" type="checkbox" value="11" name="prefer" />
+              <span>Support</span>
+            </label>
+          </p>
+        </div>
       </div>
-      <div class="rightTab">
-        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+
+      <div class="row">
+        <div class="labels col s12 m6">
+          <label for="comments">Any Comments or Suggestions?</label>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m5">
+            <textarea id="comments" class="materialize-textarea" name="comment" data-length="1000"></textarea>
+            <label for="comments">Please enter your comment here</label>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
-      </div>
-      <div class="rightTab">
-        <select id="dropdown" name="currentPos" class="dropdown">
-      <option disabled value>Select an option</option>
-      <option  value="versat">Very satisfied</option>
-      <option value="somsat">Somewhat satisfied</option>
-      <option value="neithsat">Neither satisfied nor dissatisfied</option>
-      <option value="somdis">Somewhat dissatisfied</option>
-      <option value="verdis">Very dissatisfied</option>
-    </select>
-      </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label for="userRating">* How likely is that you would recommend our Company to a friend?</label>
-      </div>
-      <div class="rightTab">
-        <ul style="list-style: none;">
-          <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
-          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
-          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
-        </ul>
-      </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label for="most-like">How would you rate the quality of the product?</label>
-      </div>
-      <div class="rightTab">
-        <select id="most-like" name="mostLike" class="dropdown">
-      <option disabled selected value>Select an option</option>
-      <option value="veryhigh">Very high quality</option>
-      <option value="high">High quality</option>
-      <option value="neitherhighnorlow">Neither high nor low quality</option>
-      <option value="low">Low quality</option>
-      <option value="verylow">Very low quality</option>
-    </select>
-      </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label for="preferences">Things that should be improved in the future<br>(Check all that apply): </label>
-      </div>
-      <div class="rightTab">
-        <ul id="preferences" style="list-style: none;">
-          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Responsibility</label></li>
-          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Supervisor work</li>
-          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Management</label></li>
-          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Client comunication</label></li>
-          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Service</label></li>
-          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Logistics</label></li>
-          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Company design</label></li>
-          <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">Prices</label></li>
-          <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Team members</label></li>
-          <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Working hours</label></li>
-          <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Support</label></li>
-        </ul>
-      </div>
-    </div>
-    <div class="rowTab">
-      <div class="labels">
-        <label for="comments">Any Comments or Suggestions?</label>
-      </div>
-      <div class="rightTab">
-        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Please enter your comment here..."></textarea>
-      </div>
-    </div>
-    <button id="submit" type="submit">Submit</button>
-  </form>
+        
+      <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+  </div>
 </div>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script type="text/javascript" src="materialize_script.js"></script>
 </body>
 </html>

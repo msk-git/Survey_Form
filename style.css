@@ -9,6 +9,7 @@ html,body {
 
 header {
   font-size: 2em;
+  text-align: center;
   font-weight: bold;
   margin: 20px;
 }
@@ -23,16 +24,35 @@ header {
   padding-top: 20px;
 }
 
+#description {
+  font-size: 1.2em;
+  text-align: center;
+}
+
 .labels {
   display: inline-block;
   text-align: right;
-  width: 40%;
   padding: 5px;
   vertical-align: top;
-  margin-top: 10px;
+  margin-top: 10px; 
+} 
+
+label {
+  font-size: 1rem;
+   color: #000000;}
+
+#userRating {
+  text-align: center;
 }
 
-.rightTab {
+p {
+  display: block;
+  text-align: left;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+/* .rightTab {
   display: inline-block;
   text-align: left;
   width: 48%;
@@ -46,9 +66,9 @@ header {
   margin: 10px;
   border: 1px solid #c0c0c0;
   border-radius: 7px;
-}
+} */
 
-#userAge {
+/* #userAge {
   width: 40px;
 }
 
@@ -56,8 +76,8 @@ header {
 input[type="checkbox"] {
   float: left;
   margin-right: 5px;
-}
-
+} */
+/* 
 #submit {
   background-color: #43a047;
   border-radius: 4px;
@@ -86,8 +106,8 @@ input[type="checkbox"] {
   margin-left: 10px;
   display: block;
   padding-bottom: 10px;
-}
-
+} */
+/* 
 @media screen and (max-width: 833px) {
   .input-field {
     width: 80%;
@@ -112,4 +132,4 @@ input[type="checkbox"] {
   select {
     width: 100%;
   }
-}
+} */
