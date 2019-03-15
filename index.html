@@ -15,36 +15,38 @@
   <style>@import url('https://fonts.googleapis.com/css?family=Lato');</style>
 </head>
 <body>
-<h1 id="title">Survey Form</h1>
+<h1 id="title">
+    <i class="far fa-hand-point-right prefix"></i>
+      Survey Form
+</h1>
 <div id="form-outer">
   <p id="description">
     <b>Let us know how we can improve our Company</b>
   </p>
   
-
   <div class="row">
     <form id="survey-form" class="col s12" method="GET" action=" https://crossorigin.me/https://google.com ">
       <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field col s12 m6 l4">
           <i class="fas fa-user prefix"></i>
           <input name="name" id="name" type="text" class="validate" required>
           <label id="name-label" for="name">*Name</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s12 m6 l4">
           <i class="fas fa-envelope prefix"></i>
           <input name="email" id="email" type="email" class="validate" required>
           <label id="email-label" for="email">*Email</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s12 m6 l4">
             <i class="fas fa-birthday-cake prefix"></i>
             <input name="age" id="number" type="number" class="input-field" min="1" max="125">
-            <label id="number-label" for="last_name">*Age</label>
+            <label id="number-label" for="last_name">Age</label>
           </div>
       </div>
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label class="leftTab" for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
+          <label for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
         </div>
         <div id="satisdisat" class="input-field col s12 m6">
           <select  name="currentPos" class="dropdown">
@@ -55,13 +57,13 @@
             <option value="somdis">Somewhat dissatisfied</option>
             <option value="verdis">Very dissatisfied</option>
           </select>
-          <label>Materialize Select</label>
+          <label>Satisfied level</label>
         </div>
       </div>
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label class="leftTab" for="userRating">* How likely is that you would recommend our Company to a friend?</label>
+          <label for="userRating">* How likely is that you would recommend our Company to a friend?</label>
         </div>
         <div id="userRating" class="col s12 m6">
           <p>
@@ -87,7 +89,7 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label class="leftTab" for="most-like">How would you rate the quality of the product?</label>
+          <label for="most-like">How would you rate the quality of the product?</label>
         </div>
         <div id="most-like" class="input-field col s12 m6">
           <select name="mostLike" class="dropdown">
@@ -98,13 +100,13 @@
             <option value="low">Low quality</option>
             <option value="verylow">Very low quality</option>
           </select>
-          <label>Materialize Select</label>
+          <label>Quality rate</label>
         </div>
       </div>
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label class="leftTab" for="preferences">Things that should be improved in the future (Check all that apply): </label>
+          <label for="preferences">Things that should be improved in the future (Check all that apply): </label>
         </div>
         <div id="preferences" class="col s12 m5">
           <p>
@@ -177,11 +179,11 @@
       </div>
 
       <div class="row">
-        <div class="labels col s12 m6">
-          <label class="leftTab" for="comments">Any Comments or Suggestions?</label>
+        <div class="labels col s12 m6 l6">
+          <label for="comments">Any Comments or Suggestions?</label>
         </div>
         <div class="row">
-          <div class="input-field col s12 m5">
+          <div class="input-field col s12 m7 l5">
             <i class="fas fa-pencil-alt prefix"></i>
             <textarea id="comments" class="materialize-textarea" name="comment" data-length="1000"></textarea>
             <label for="comments">Please enter your comment here</label>
