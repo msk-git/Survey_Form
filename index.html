@@ -26,14 +26,17 @@
     <form id="survey-form" class="col s12" method="GET" action=" https://crossorigin.me/https://google.com ">
       <div class="row">
         <div class="input-field col s4">
+          <i class="fas fa-user prefix"></i>
           <input name="name" id="name" type="text" class="validate" required>
           <label id="name-label" for="name">*Name</label>
         </div>
         <div class="input-field col s4">
+          <i class="fas fa-envelope prefix"></i>
           <input name="email" id="email" type="email" class="validate" required>
           <label id="email-label" for="email">*Email</label>
         </div>
         <div class="input-field col s4">
+            <i class="fas fa-birthday-cake prefix"></i>
             <input name="age" id="number" type="number" class="input-field" min="1" max="125">
             <label id="number-label" for="last_name">*Age</label>
           </div>
@@ -41,7 +44,7 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
+          <label class="leftTab" for="satisdisat">Overall, how satisfied or dissatisfied are you with our company?</label>
         </div>
         <div id="satisdisat" class="input-field col s12 m6">
           <select  name="currentPos" class="dropdown">
@@ -58,7 +61,7 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label for="userRating">* How likely is that you would recommend our Company to a friend?</label>
+          <label class="leftTab" for="userRating">* How likely is that you would recommend our Company to a friend?</label>
         </div>
         <div id="userRating" class="col s12 m6">
           <p>
@@ -84,7 +87,7 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label for="most-like">How would you rate the quality of the product?</label>
+          <label class="leftTab" for="most-like">How would you rate the quality of the product?</label>
         </div>
         <div id="most-like" class="input-field col s12 m6">
           <select name="mostLike" class="dropdown">
@@ -101,7 +104,7 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label for="preferences">Things that should be improved in the future (Check all that apply): </label>
+          <label class="leftTab" for="preferences">Things that should be improved in the future (Check all that apply): </label>
         </div>
         <div id="preferences" class="col s12 m5">
           <p>
@@ -175,10 +178,11 @@
 
       <div class="row">
         <div class="labels col s12 m6">
-          <label for="comments">Any Comments or Suggestions?</label>
+          <label class="leftTab" for="comments">Any Comments or Suggestions?</label>
         </div>
         <div class="row">
           <div class="input-field col s12 m5">
+            <i class="fas fa-pencil-alt prefix"></i>
             <textarea id="comments" class="materialize-textarea" name="comment" data-length="1000"></textarea>
             <label for="comments">Please enter your comment here</label>
           </div>
